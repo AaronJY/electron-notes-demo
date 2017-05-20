@@ -9,7 +9,8 @@ app.on('ready', function() {
     })
 
     mainWindow.loadURL('file://' + __dirname + '/app/index.html')
-    mainWindow.openDevTools();
+    // mainWindow.openDevTools()
+    mainWindow.setMenu(null)
     mainWindow.on('closed', function() {
         mainWindow = null
     })
@@ -17,6 +18,6 @@ app.on('ready', function() {
 
 app.on('window-all-closed', function () {
     if (process.platform !== 'darwin') {
-        app.quit();
+        app.quit()
     }
 })
