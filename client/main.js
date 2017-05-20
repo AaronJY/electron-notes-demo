@@ -4,7 +4,7 @@ let mainWindow
 
 app.on('ready', function() {
     mainWindow = new BrowserWindow({
-        width: 500, height: 600,
+        width: 500, height: 400,
         resizable: false, maximizable: false
     })
 
