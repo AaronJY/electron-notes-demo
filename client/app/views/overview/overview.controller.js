@@ -1,16 +1,20 @@
 angular.module('app').controller('overviewController', [
     '$scope',
     '$location',
-    function ($scope, $location) {
-        $scope.notes = [
-            {
-                name: 'Aaron\'s test note 1',
-                lastUpdatedDate: new Date()
-            }
-        ]
+    'notesManager',
+    function ($scope, $location, notesManager) {
+        $scope.notes = notesManager.notes
 
         $scope.createNote = function() {
             $location.path('/create-note')
         }
+
+        $scope.deleteNote = function(noteIndex) {
+            notesManager.deleteNote(noteIndex)
+        }
+
+        $scope.$on('notesUpdated', function(evt, notes) {
+            $scope.notes = notes
+        })
     }]
 )

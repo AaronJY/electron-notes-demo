@@ -11,14 +11,20 @@
     </thead>
 
     <tbody>
-        <tr ng-repeat="note in notes">
-            <td>{{$index}}</td>
+        <tr ng-if="notes.length === 0">
+            <td colspan="3">No notes saved. Click 'Create Note' to get started!</td>
+        </tr>
+
+        <tr ng-if="notes.length > 0" ng-repeat="note in notes">
+            <td>{{$index + 1}}</td>
             <td>{{note.name}}</td>
-            <td>{{note.lastUpdatedDate}}</td>
+            <td>{{note.lastUpdatedDate | date:'dd-MM-yyyy HH:mm' }}</td>
             <td align="right">
-                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-danger" ng-click="deleteNote($index)">Delete</button>
             </td>
         </tr>
+
+
     </tbody>
 </table>
 
