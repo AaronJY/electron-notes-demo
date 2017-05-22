@@ -8,5 +8,9 @@ angular.module('app').controller('createNoteController', [
 
             $location.path('/')
         }
+
+        $scope.back = function() {
+            $location.path('/')
+        }
     }]
 )
