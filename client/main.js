@@ -9,7 +9,7 @@ app.on('ready', function() {
     })
 
     mainWindow.loadURL('file://' + __dirname + '/app/index.html')
-    // mainWindow.openDevTools()
+    mainWindow.openDevTools()
     mainWindow.setMenu(null)
     mainWindow.on('closed', function() {
         mainWindow = null

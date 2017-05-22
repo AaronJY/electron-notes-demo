@@ -1,3 +1,11 @@
 body {
     margin: 1em;
 }
+
+.txt-center {
+    text-align: center;
+}
+
+#viewNoteContent {
+    height: 10em;
+}

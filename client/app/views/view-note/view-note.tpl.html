@@ -1,0 +1,9 @@
+<h2>{{note.name}}</h2>
+
+<h4>Last Updated <small>{{note.lastUpdatedDate | date:'yyyy MM dd hh:mm'}}</small></h3>
+
+<textarea id="viewNoteContent" class="form-control" disabled>{{note.content}}</textarea>
+
+<hr/>
+
+<button class="btn btn-default" ng-click="back()">Back</button>

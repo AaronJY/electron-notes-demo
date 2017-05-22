@@ -13,6 +13,12 @@ angular.module('app').controller('overviewController', [
             notesManager.deleteNote(noteIndex)
         }
 
+        $scope.viewNote = function(noteIndex) {
+            $location.path('/view-note').search({
+                noteIndex: noteIndex
+            })
+        }
+
         $scope.$on('notesUpdated', function(evt, notes) {
             $scope.notes = notes
         })

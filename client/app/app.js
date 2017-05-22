@@ -11,4 +11,9 @@ app.config(function($routeProvider) {
             templateUrl: 'views/create-note/create-note.tpl.html',
             controller: 'createNoteController'
         })
+
+        .when('/view-note', {
+            templateUrl: 'views/view-note/view-note.tpl.html',
+            controller: 'viewNoteController'
+        })
 })
