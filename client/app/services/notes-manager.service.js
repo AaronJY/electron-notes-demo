@@ -9,7 +9,7 @@ angular.module('app').factory('notesManager', [
             }
         ]
 
-        var addNote = function(name, content) {
+        let addNote = function(name, content) {
             let note = {
                 name: name,
                 content: content,
@@ -21,7 +21,7 @@ angular.module('app').factory('notesManager', [
             onNotesChanged()
         }
 
-        var deleteNote = function(noteIndex) {
+        let deleteNote = function(noteIndex) {
             notes.splice(noteIndex, 1)
 
             onNotesChanged()

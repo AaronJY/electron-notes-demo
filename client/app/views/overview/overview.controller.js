@@ -23,12 +23,14 @@ angular.module('app').controller('overviewController', [
             let output = 'Name,LastUpdatedDate,Content\n'
 
             angular.forEach($scope.notes, function(note) {
-                output += `${note.name},${note.lastUpdatedDate},${note.content}\n`
+                let content = note.content === undefined ? '' : note.content
+                
+                output += `${note.name},${note.lastUpdatedDate},${content}\n`
             });
 
-            dialog.showSaveDialog(function(fileName) {
-                console.log(fileName)
-            })
+            console.log(output)
+
+            // todo: show save dialog
         }
 
         $scope.$on('notesUpdated', function(evt, notes) {
