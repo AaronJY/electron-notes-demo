@@ -19,6 +19,18 @@ angular.module('app').controller('overviewController', [
             })
         }
 
+        $scope.export = function() {
+            let output = 'Name,LastUpdatedDate,Content\n'
+
+            angular.forEach($scope.notes, function(note) {
+                output += `${note.name},${note.lastUpdatedDate},${note.content}\n`
+            });
+
+            dialog.showSaveDialog(function(fileName) {
+                console.log(fileName)
+            })
+        }
+
         $scope.$on('notesUpdated', function(evt, notes) {
             $scope.notes = notes
         })
