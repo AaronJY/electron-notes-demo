@@ -14,5 +14,6 @@ A demo application demonstrating how to use electron and angularjs to create a n
 
 1. Make sure you have electron installed. You can install it by running the `npm install electron -g` command
 2. Clone the repository 
-3. Open a command line and navigate to the 'client' folder where main.js lives
-4. Run `electron main.js` via the command line
+3. Navigate to the project root folder and run `npm install` to install any missing packages
+4. Open a command line and navigate to the 'client' folder where main.js lives
+5. Run `electron main.js` via the command line
