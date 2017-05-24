@@ -1,7 +1,7 @@
 angular.module('app').factory('notesManager', [
     '$rootScope',
     function($rootScope) {
-        var notes = [
+        let notes = [
             {
                 name: 'Buy Milk',
                 content: 'from ASDA',
@@ -10,7 +10,7 @@ angular.module('app').factory('notesManager', [
         ]
 
         var addNote = function(name, content) {
-            var note = {
+            let note = {
                 name: name,
                 content: content,
                 lastUpdatedDate: new Date()
